@@ -1,0 +1,25 @@
+<html>
+  <head>
+		<script src="keymaster.min.js"></script>
+		<script src="inherit.js"></script>
+    <script src="moving_object.js"></script>
+		<script src="asteroid.js"></script>
+		<script src="bullet.js"></script>
+		<script src="ship.js"></script>
+		<script src="game.js"></script>
+  </head>
+  <body>
+    <script>
+      var canvas = document.createElement("canvas");
+      canvas.setAttribute("width", gameLib.Game.DIM_X);
+      canvas.setAttribute("height", gameLib.Game.DIM_Y);
+
+      var body = document.getElementsByTagName("body")[0];
+      body.appendChild(canvas);
+
+			var ctx = canvas.getContext("2d");
+			var game = new this.gameLib.Game(ctx);
+			game.start();
+    </script>
+  </body>
+</html>
